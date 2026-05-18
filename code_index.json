@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "project_hash": "f43e5c4afc17df228fb21024cae380dd9aa6841a90dc5fa136cc827d3918abca"
+  },
+  "tree": {
+    "codetreebuilder.py": {
+      "type": "file",
+      "classes": {
+        "CodeTreeBuilder": {
+          "type": "class",
+          "methods": [
+            "__init__",
+            "parse_python_file",
+            "build_tree"
+          ]
+        }
+      },
+      "standalone_functions": []
+    },
+    "codetreesummarizer.py": {
+      "type": "file",
+      "classes": {
+        "CodeTreeSummarizer": {
+          "type": "class",
+          "methods": [
+            "__init__",
+            "get_project_hash"
+          ]
+        }
+      },
+      "standalone_functions": []
+    },
+    "main.py": {
+      "type": "file",
+      "classes": {
+        "colors": {
+          "type": "class",
+          "methods": []
+        }
+      },
+      "standalone_functions": []
+    },
+    "codesnippetslicer.py": {
+      "type": "file",
+      "classes": {
+        "CodeSnippetSlicer": {
+          "type": "class",
+          "methods": [
+            "__init__",
+            "_find_node",
+            "extract"
+          ]
+        }
+      },
+      "standalone_functions": []
+    },
+    "codeindexrouter.py": {
+      "type": "file",
+      "classes": {
+        "RouterNavigationError": {
+          "type": "class",
+          "methods": []
+        },
+        "RouterAnswerError": {
+          "type": "class",
+          "methods": []
+        },
+        "CodeIndexRouter": {
+          "type": "class",
+          "methods": [
+            "__init__",
+            "_cache_key",
+            "clear_cache",
+            "_extract_snippet"
+          ]
+        }
+      },
+      "standalone_functions": [
+        "_clean_llm_output",
+        "_fuzzy_match_file",
+        "_fuzzy_match_node"
+      ]
+    },
+    "models.py": {
+      "type": "file",
+      "classes": {
+        "MethodData": {
+          "type": "class",
+          "methods": []
+        },
+        "FunctionData": {
+          "type": "class",
+          "methods": []
+        },
+        "ClassData": {
+          "type": "class",
+          "methods": []
+        },
+        "FileNode": {
+          "type": "class",
+          "methods": []
+        },
+        "DirectoryNode": {
+          "type": "class",
+          "methods": []
+        },
+        "IndexMeta": {
+          "type": "class",
+          "methods": []
+        },
+        "CodeIndex": {
+          "type": "class",
+          "methods": []
+        },
+        "RouterResult": {
+          "type": "class",
+          "methods": []
+        }
+      },
+      "standalone_functions": [
+        "flatten_files"
+      ]
+    }
+  }
+}

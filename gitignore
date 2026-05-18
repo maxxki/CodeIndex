@@ -1,0 +1,19 @@
+# CodeIndex Cache
+code_index.json
+
+# Logs
+.logs/
+
+# Env
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
