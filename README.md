@@ -52,7 +52,7 @@ Three-stage pipeline keeps token usage minimal: the router never sees full sourc
 ### 1. Clone & install Python deps
 
 ```bash
-git clone https://github.com/yourname/codeindex
+git clone https://github.com/maxxki/CodeIndex
 cd codeindex
 pip install -r requirements.txt
 ```
