@@ -25,19 +25,19 @@ Your Question
      ▼
 ┌─────────────────────────┐
 │  🧭 Router LLM (1.5B)   │  ← Picks the right file + method
-│     Schema-constrained   │     (JSON enum, zero hallucination)
+│     Schema-constrained  │     (JSON enum, zero hallucination)
 └─────────────────────────┘
      │
      ▼
 ┌─────────────────────────┐
 │  ✂️  AST Slicer         │  ← Extracts exact code snippet
-│     No regex. No guess.  │     (AST node.body, not text search)
+│     No regex. No guess. │     (AST node.body, not text search)
 └─────────────────────────┘
      │
      ▼
 ┌─────────────────────────┐
 │  🧠 Answer LLM (3B+)    │  ← Explains the snippet
-│     Context-aware        │     (never sees the whole repo)
+│     Context-aware       │     (never sees the whole repo)
 └─────────────────────────┘
      │
      ▼
@@ -179,25 +179,25 @@ MODEL_ANSWER=qwen2.5-coder-3b-instruct-iq4_xs.gguf \
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                        main.py                               │
-│  • Hash check → Index build → CLI loop                       │
-│  • Atomic file writes • Graceful shutdown                    │
+│                        main.py                              │
+│  • Hash check → Index build → CLI loop                      │
+│  • Atomic file writes • Graceful shutdown                   │
 ├─────────────────────────────────────────────────────────────┤
 │  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────┐  │
-│  │ codetreebuilder │  │codetreesummarizer│  │codeindexrouter│ │
-│  │ • AST parser    │  │ • LLM summaries  │  │ • 3-stage   │  │
-│  │ • Class/method  │  │ • Parallel async │  │   routing   │  │
-│  │ • Nested func   │  │ • Semaphore ctrl │  │ • Schema    │  │
-│  │   metadata      │  │ • Exponential    │  │   constrain │  │
-│  │                 │  │   backoff        │  │ • Security  │  │
+│  │ codetreebuilder │  │codetreesummar.  │  │codeindexrout│  │
+│  │ • AST parser    │  │ • LLM summaries │  │ • 3-stage   │  │
+│  │ • Class/method  │  │ • Parallel async│  │   routing   │  │
+│  │ • Nested func   │  │ • Semaphore ctr │  │ • Schema    │  │
+│  │   metadata      │  │ • Exponential   │  │   constrain │  │
+│  │                 │  │   backoff       │  │ • Security  │  │
 │  └─────────────────┘  └─────────────────┘  └─────────────┘  │
-│  ┌─────────────────┐  ┌─────────────────┐                    │
-│  │codesnippetslicer│  │     models.py    │                    │
-│  │ • AST extraction│  │ • TypedDict      │                    │
-│  │ • node.body     │  │ • flatten_files  │                    │
-│  │ • Indentation   │  │ • Type safety    │                    │
-│  │   preservation  │  │                  │                    │
-│  └─────────────────┘  └─────────────────┘                    │
+│  ┌─────────────────┐  ┌─────────────────┐                   │
+│  │codesnippetslicer│  │     models.py   │                   │
+│  │ • AST extraction│  │ • TypedDict     │                   │
+│  │ • node.body     │  │ • flatten_files │                   │
+│  │ • Indentation   │  │ • Type safety   │                   │
+│  │   preservation  │  │                 │                   │
+│  └─────────────────┘  └─────────────────┘                   │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -295,8 +295,8 @@ MIT — do whatever you want with it.
 
 <div align="center">
 
-Built with 🔥 by developers who believe code should understand itself.
+Built with 🔥 by Maxxki - Maximilian Kiefer. 
 
-**Stars appreciated if this saves you a debugging session!**
+**Stars appreciated if you like it!**
 
 </div>
